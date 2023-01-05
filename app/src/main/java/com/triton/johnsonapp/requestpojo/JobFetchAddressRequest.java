@@ -9,6 +9,7 @@ public class JobFetchAddressRequest {
 
     private String job_no;
     private String ST_MDH_SEQNO;
+    private String job_id;
 
     public String getJob_no() {
         return job_no;
@@ -24,5 +25,13 @@ public class JobFetchAddressRequest {
 
     public void setST_MDH_SEQNO(String ST_MDH_SEQNO) {
         this.ST_MDH_SEQNO = ST_MDH_SEQNO;
+    }
+
+    public String getJob_id() {
+        return job_id;
+    }
+
+    public void setJob_id(String job_id) {
+        this.job_id = job_id;
     }
 }

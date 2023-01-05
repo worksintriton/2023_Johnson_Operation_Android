@@ -1,12 +1,8 @@
 package com.triton.johnsonapp.db;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
 
@@ -21,6 +17,7 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         sqLiteDatabase.execSQL(DATE_QUERY);
+        sqLiteDatabase.execSQL(QR_QUERY);
     }
 
     @Override
@@ -37,4 +34,17 @@ public class DbHelper extends SQLiteOpenHelper {
             + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CURRENT_DATE
             + " TEXT );";
 
+    public static final String QR_TABLE = "qr_table";
+    public static final String QR_CODE = "qr_code";
+    public static final String QR_COUNT = "qr_count";
+    public static  final String JOB_ID = "job_id";
+    public static final String MATLID = "total_count";
+
+    public static final String QR_QUERY = "CREATE TABLE "
+            + QR_TABLE + " (" + ID
+            + " INTEGER PRIMARY KEY AUTOINCREMENT, " + QR_CODE
+            + " TEXT , " + QR_COUNT
+            + " TEXT , " + JOB_ID
+            + " TEXT , " + MATLID
+            + " TEXT );";
 }

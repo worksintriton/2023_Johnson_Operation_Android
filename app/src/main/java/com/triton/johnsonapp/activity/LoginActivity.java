@@ -243,6 +243,7 @@ public class LoginActivity extends AppCompatActivity implements OnMapReadyCallba
 
 
                     Log.e(TAG, "loginButton latitude : " + latitude + " longitude : " + longitude);
+
                     if (latitude >=0 && longitude >= 0) {
 // change form not equal to Zero to equal to Zero
                         LoginResponseCall();
@@ -369,19 +370,19 @@ private void ShowPopup()
                                     response.body().getData().getLocation(),
                                     response.body().getData().getUser_role()
 
-
-
-
                             );
 
                             String usermobile = userNameMaterialEditText.getText().toString();
+                            String username = response.body().getData().getUser_name();
                             Log.e("Mobile Number",""+usermobile);
                             Log.e("Location",""+location);
+                            Log.e("Name",""+username);
 
                             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putString("mobile", userNameMaterialEditText.getText().toString());
+                            editor.putString("mobile", usermobile);
                             editor.putString("location", location);
+                            editor.putString("username", username);
                             Log.e("Mobile Number 1",""+ usermobile);
                             Log.e("Location 1",""+location);
                             editor.apply();

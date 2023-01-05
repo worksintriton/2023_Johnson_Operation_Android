@@ -290,12 +290,12 @@
                     android:layout_height="wrap_content"
                      android:layout_marginTop="@dimen/_40dp"
                     android:fontFamily="@font/sourcesanspro_regular"
-                    android:text="23.05.2022"
+                    android:text="Test Version : 22/11/2022 11:15"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:visibility="invisible" />
+                    android:visibility="visible" />
 
 
                 <TextView

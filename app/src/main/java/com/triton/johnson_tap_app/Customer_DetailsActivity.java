@@ -2,6 +2,7 @@ package com.triton.johnson_tap_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -27,6 +28,7 @@ public class Customer_DetailsActivity extends AppCompatActivity {
     Dialog dialog;
     Dialog alertdialog;
 
+    @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();

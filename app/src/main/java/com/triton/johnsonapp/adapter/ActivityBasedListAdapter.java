@@ -122,6 +122,8 @@ public class ActivityBasedListAdapter extends  RecyclerView.Adapter<RecyclerView
             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("form_type",formtype);
+            editor.putString("UKEY",dataBeanList.get(position).getUKEY());
+            Log.e("Ukey",""+ dataBeanList.get(position).getUKEY());
             editor.apply();
             context.startActivity(intent);
 

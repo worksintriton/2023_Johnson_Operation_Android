@@ -27,12 +27,15 @@ import com.triton.johnsonapp.requestpojo.JoinInspecCheckStatusRequest;
 import com.triton.johnsonapp.requestpojo.JoinInspectionRequest;
 import com.triton.johnsonapp.requestpojo.LoginRequest;
 import com.triton.johnsonapp.requestpojo.PauseJobRequest;
+import com.triton.johnsonapp.requestpojo.QRCodeListRequest;
 import com.triton.johnsonapp.requestpojo.ResumeJobRequest;
 import com.triton.johnsonapp.requestpojo.RowBasedStroeDataRequest;
 import com.triton.johnsonapp.requestpojo.SelectEngineerRequest;
 import com.triton.johnsonapp.requestpojo.StartWorkRequest;
 import com.triton.johnsonapp.requestpojo.StopJobRequest;
 import com.triton.johnsonapp.requestpojo.SubGroupDetailManagementRequest;
+import com.triton.johnsonapp.requestpojo.SubmitQRRequest;
+import com.triton.johnsonapp.requestpojo.SubmitScanQRRequest;
 import com.triton.johnsonapp.requestpojo.SubordActivityFormReqest;
 import com.triton.johnsonapp.responsepojo.ActivityGetListNumberResponse;
 import com.triton.johnsonapp.responsepojo.ActivityListManagementResponse;
@@ -56,7 +59,10 @@ import com.triton.johnsonapp.responsepojo.JobNoManagementResponse;
 import com.triton.johnsonapp.responsepojo.JoinInspectionCheckStatusResponse;
 import com.triton.johnsonapp.responsepojo.JoinInspectionResponse;
 import com.triton.johnsonapp.responsepojo.LeaveFormDataStoreResponse;
+import com.triton.johnsonapp.responsepojo.LiftwellInfo_Response;
 import com.triton.johnsonapp.responsepojo.LoginResponse;
+import com.triton.johnsonapp.responsepojo.MaterialList_JointInspectionResponse;
+import com.triton.johnsonapp.responsepojo.QRCodeListResponse;
 import com.triton.johnsonapp.responsepojo.Searchenggresponse;
 import com.triton.johnsonapp.responsepojo.SelectEnginnerResponse;
 import com.triton.johnsonapp.responsepojo.SubGroupDetailManagementResponse;
@@ -230,6 +236,22 @@ public interface APIInterface {
 
     @POST("job_no_managment/fetch_rm_info_single")
     Call<ViewInfoResponse> ViewInfoRequestCall(@Header("Content-Type") String type, @Body JobFetchAddressRequest jobFetchAddressRequest);
+
+
+    @POST("activity/spec_details")
+    Call<LiftwellInfo_Response> LiftWellInfoCall(@Header("Content-Type") String type, @Body JobFetchAddressRequest jobFetchAddressRequest);
+
+    @POST("joininspection/fetch_materialid_list")
+    Call<MaterialList_JointInspectionResponse> MaterialListJointInspectionCall(@Header("Content-Type") String type, @Body JobFetchAddressRequest jobFetchAddressRequest);
+
+    @POST("joininspection/fetch_qr_code_list_mtld_id")
+    Call<QRCodeListResponse> GetQRListCall(@Header("Content-Type") String type, @Body QRCodeListRequest qrCodeListRequest);
+
+    @POST("scanned_qr_details/submit_scanned_qr")
+    Call<SuccessResponse> SubmitQRListCall(@Header("Content-Type") String type, @Body SubmitQRRequest submitQRRequest);
+
+    @POST("scanned_qr_details/submit_scanned_qr")
+    Call<SuccessResponse> SubmitScanQRCall(@Header("Content-Type") String type, @Body SubmitScanQRRequest submitScanQRRequest);
 
     @POST("job_no_managment/fetch_rm_info_list")
     Call<Fetch_rm_info_listResponse> Fetch_rm_info_listRequestCall(@Header("Content-Type") String type, @Body JobFetchAddressRequest jobFetchAddressRequest);

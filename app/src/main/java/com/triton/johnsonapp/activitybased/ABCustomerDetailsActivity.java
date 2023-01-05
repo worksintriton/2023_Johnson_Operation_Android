@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -20,17 +19,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.gson.Gson;
 import com.triton.johnsonapp.Fetch_RM_Info_ListActivity;
 import com.triton.johnsonapp.Forms.ImageBasedInputFormActivity;
-import com.triton.johnsonapp.Forms.InputFormFiveActivity;
 import com.triton.johnsonapp.Forms.InputValueFormListActivity;
-import com.triton.johnsonapp.Forms.JointInspectorInputFormActivity;
 import com.triton.johnsonapp.Forms.RowBasedInputFormActivity;
 import com.triton.johnsonapp.R;
 
-import com.triton.johnsonapp.activity.CustomerDetailsActivity;
-import com.triton.johnsonapp.activity.MainActivity;
 import com.triton.johnsonapp.activity.SubGroupListActivity;
 import com.triton.johnsonapp.api.APIInterface;
 import com.triton.johnsonapp.api.RetrofitClient;
+import com.triton.johnsonapp.infopages.InfoList_Activity;
+import com.triton.johnsonapp.infopages.MaterialList_JointInspection_Activity;
 import com.triton.johnsonapp.requestpojo.JobFetchAddressRequest;
 import com.triton.johnsonapp.responsepojo.JobFetchAddressResponse;
 import com.triton.johnsonapp.session.SessionManager;
@@ -89,6 +86,15 @@ public class ABCustomerDetailsActivity extends AppCompatActivity {
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.btn_continue)
     Button btn_continue;
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.img_info)
+    ImageView img_Info;
+
+
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.img_scan)
+    ImageView img_Scan;
 
     private Dialog dialog;
     String Customeraddress;
@@ -186,6 +192,38 @@ public class ABCustomerDetailsActivity extends AppCompatActivity {
             JobFetchAddressRequestCall();
 
 
+        }
+
+        if (UKEY.equals("ESPD-ACT1")){
+
+            img_Info.setVisibility(View.VISIBLE);
+
+            img_Info.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent = new Intent(ABCustomerDetailsActivity.this, InfoList_Activity.class);
+                    intent.putExtra("UKEY",UKEY);
+                    intent.putExtra("job_id",job_id);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        if (UKEY.equals("OP-ACT8S")){
+
+            img_Scan.setVisibility(View.VISIBLE);
+
+            img_Scan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent = new Intent(ABCustomerDetailsActivity.this, MaterialList_JointInspection_Activity.class);
+                    intent.putExtra("UKEY",UKEY);
+                    intent.putExtra("job_id",job_id);
+                    startActivity(intent);
+                }
+            });
         }
 
         btn_continue.setOnClickListener(new View.OnClickListener() {
