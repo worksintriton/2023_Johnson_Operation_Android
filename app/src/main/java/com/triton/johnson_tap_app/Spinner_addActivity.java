@@ -5,7 +5,6 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,26 +14,22 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.triton.johnson_tap_app.Adapter.PetBreedTypesListAdapter;
 import com.triton.johnson_tap_app.api.APIInterface;
-import com.triton.johnson_tap_app.api.ApiCall;
 import com.triton.johnson_tap_app.api.RetrofitClient;
-import com.triton.johnsonapp.R;
+import com.triton.johnson_tap_app.requestpojo.BreedTypeRequest1;
+import com.triton.johnson_tap_app.responsepojo.BreedTypeResponse1;
 
 import java.util.List;
 import java.util.Objects;
 
-import butterknife.BindView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

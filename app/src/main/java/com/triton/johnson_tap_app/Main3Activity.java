@@ -12,8 +12,6 @@ import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.TextView;
 
-import com.triton.johnsonapp.R;
-
 public class Main3Activity extends AppCompatActivity {
 
     private TextView textView;

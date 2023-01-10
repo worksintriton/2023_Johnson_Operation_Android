@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.triton.johnsonapp.R;
+import com.triton.johnson_tap_app.R;
 
 import java.util.List;
 

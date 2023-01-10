@@ -1,6 +1,6 @@
 package com.triton.johnson_tap_app.interfaces;
 
-import com.triton.johnson_tap_app.responsepojo.GetFieldListResponse;
+import com.triton.johnson_tap_app.GetFieldListResponse;
 
 import java.util.List;
 

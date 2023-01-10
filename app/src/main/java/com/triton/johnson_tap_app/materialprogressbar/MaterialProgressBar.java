@@ -14,7 +14,8 @@ import android.widget.ProgressBar;
 
 import androidx.annotation.Nullable;
 
-import com.triton.johnsonapp.R;
+import com.triton.johnson_tap_app.R;
+
 
 /**
  * Created by Iddinesh.

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Agent_ProfileActivity">
+    tools:context=".Service_Activity.Agent_ProfileActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -54,6 +54,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/agent_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -63,8 +64,8 @@
                 android:paddingLeft="5dp"
                 android:paddingTop="10dp"
                 android:singleLine="true"
-                android:textColor="#000000"
-                android:text="Deepak S" />
+                android:text="Deepak S"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -77,6 +78,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/agent_id"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -86,8 +88,8 @@
                 android:paddingLeft="5dp"
                 android:paddingTop="10dp"
                 android:singleLine="true"
-                android:textColor="#000000"
-                android:text="116" />
+                android:text="116"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -100,6 +102,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/agent_location"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -109,8 +112,8 @@
                 android:paddingLeft="5dp"
                 android:paddingTop="10dp"
                 android:singleLine="true"
-                android:textColor="#000000"
-                android:text="Bhubaneswar" />
+                android:text="Bhubaneswar"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -123,6 +126,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/completed_jobs"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -131,8 +135,8 @@
                 android:layout_marginBottom="5dp"
                 android:paddingLeft="5dp"
                 android:singleLine="true"
-                android:textColor="#000000"
-                android:text="0" />
+                android:text="0"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -145,6 +149,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/pending_jobs"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -167,6 +172,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/invalid_jobs"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -175,9 +181,9 @@
                 android:layout_marginBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingTop="10dp"
-                android:textColor="#000000"
                 android:singleLine="true"
-                android:text="0" />
+                android:text="0"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -190,6 +196,7 @@
                 android:textSize="15dp" />
 
             <TextView
+                android:id="@+id/services_mapped"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="5dp"
@@ -198,9 +205,9 @@
                 android:layout_marginBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingTop="10dp"
-                android:textColor="#000000"
                 android:singleLine="true"
-                android:text="3" />
+                android:text="3"
+                android:textColor="#000000" />
 
         </LinearLayout>
 

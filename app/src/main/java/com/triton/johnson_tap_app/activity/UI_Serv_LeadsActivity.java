@@ -13,8 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
-
-import com.triton.johnsonapp.R;
+import com.triton.johnson_tap_app.R;
 
 import java.util.Calendar;
 

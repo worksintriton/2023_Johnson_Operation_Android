@@ -6,8 +6,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 
-import com.triton.johnsonapp.R;
-
+import com.triton.johnson_tap_app.R;
 
 public class ArcLayoutSettings {
     private final static int CROP_INSIDE = 0;

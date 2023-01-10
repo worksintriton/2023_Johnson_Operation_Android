@@ -3,7 +3,6 @@ package com.triton.johnson_tap_app.data.form3submit;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.triton.johnson_tap_app.SubmitDailyRequest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +70,9 @@ public class Form3SubmitIP {
     @SerializedName("created_by")
     @Expose
     private String createdBy;
+    @SerializedName("collection_value")
+    @Expose
+    private String collection_value;
     @SerializedName("job_details")
     @Expose
     private List<JobDetail> jobDetails = new ArrayList<JobDetail>();
@@ -233,6 +235,14 @@ public class Form3SubmitIP {
 
     public void setCreatedBy(String createdBy) {
         this.createdBy = createdBy;
+    }
+
+    public String getCollection_value() {
+        return collection_value;
+    }
+
+    public void setCollection_value(String collection_value) {
+        this.collection_value = collection_value;
     }
 
     public List<JobDetail> getJobDetails() {

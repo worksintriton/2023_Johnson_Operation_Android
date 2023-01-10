@@ -5,7 +5,9 @@ import android.graphics.drawable.Drawable;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.EditText;
 import android.widget.TextView;
+
 public abstract class DrawableClickListener implements OnTouchListener{
 
     /* PUBLIC CONSTANTS */
@@ -246,7 +248,7 @@ public abstract class DrawableClickListener implements OnTouchListener{
          *            The {@link TextView} that this
          *            {@link RightDrawableClickListener} is associated with.
          */
-        public RightDrawableClickListener( final TextView view )
+        public RightDrawableClickListener( final EditText view )
         {
             super( view, DrawableClickListener.DRAWABLE_INDEX_RIGHT );
         }

@@ -105,7 +105,7 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sourcesanspro_regular"
-                    android:text="PM Date "
+                    android:text="BD Date "
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -130,6 +130,8 @@
                     android:textStyle="bold"/>
 
             </LinearLayout>
+
+
 
 
         </LinearLayout>

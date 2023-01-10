@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,9 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.triton.johnson_tap_app.activity.MainActivity;
-import com.triton.johnson_tap_app.activity.UI_Servenq_RequestActivity;
-import com.triton.johnsonapp.R;
+import com.triton.johnson_tap_app.Adapter.AddEducAdapter;
+import com.triton.johnson_tap_app.requestpojo.DocUploadRequest;
 
 import java.util.ArrayList;
 import java.util.List;

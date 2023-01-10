@@ -4,25 +4,9 @@ import java.util.List;
 
 public class ActivityGetListNumberResponse {
 
-    /**
-     * Status : Success
-     * Message : Respose Data
-     * Data : [{"UKEY":"ESPD-ACT1","UKEY_DESC":" Lift Well Details Entry(Site details upload)","CELL_NUMBER":"9043456963","NEW_ACTIVITY":1,"WIP_ACTIVITY":2,"_id":"6232d622a02c8ce867afb931","form_type":2},{"UKEY":"ESPD-ACT3","UKEY_DESC":"Enquiry Spec Verification & Approval","CELL_NUMBER":"9043456963","NEW_ACTIVITY":1,"WIP_ACTIVITY":0,"_id":"6232d622a02c8ce867afb933","form_type":1}]
-     * Code : 200
-     */
-
     private String Status;
     private String Message;
     private int Code;
-    /**
-     * UKEY : ESPD-ACT1
-     * UKEY_DESC :  Lift Well Details Entry(Site details upload)
-     * CELL_NUMBER : 9043456963
-     * NEW_ACTIVITY : 1
-     * WIP_ACTIVITY : 2
-     * _id : 6232d622a02c8ce867afb931
-     * form_type : 2
-     */
 
     private List<DataBean> Data;
 

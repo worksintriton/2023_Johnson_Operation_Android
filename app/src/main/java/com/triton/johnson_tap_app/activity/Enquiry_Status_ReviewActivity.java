@@ -10,8 +10,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-
-import com.triton.johnsonapp.R;
+import com.triton.johnson_tap_app.R;
 
 import java.util.Calendar;
 

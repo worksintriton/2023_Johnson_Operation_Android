@@ -22,7 +22,9 @@ public class RetrofitClient {
   public static String IMAGE_BASE_URL = "http://54.202.95.145::3000/";*/
 
     /*live*/
-    public static String BASE_URL = "http://smart.johnsonliftsltd.com:3000/api/";
+ //   public static String BASE_URL = "http://3.101.19.51:3000/api/";
+   public static String BASE_URL = "http://smart.johnsonliftsltd.com:3000/api/";
+//    public static String BASE_URL = "http://35.165.75.97:3000/api/";
     public static String IMAGE_BASE_URL = "http://smart.johnsonliftsltd.com:3000/";
 
     /*Banner Image*/

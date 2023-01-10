@@ -65,6 +65,16 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
                 <TextView
                     android:layout_width="350dp"
                     android:layout_height="20dp"
@@ -97,6 +107,54 @@
                         android:text="RTGS" />
 
                 </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="350dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:text="Collection Value :"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <RadioGroup
+                        android:id="@+id/rg2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_service"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:checked="true"
+                            android:text="Service" />
+
+                        <RadioButton
+                            android:id="@+id/rb_manger"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:text="Major" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -336,6 +394,7 @@
                             android:layout_marginBottom="5dp"
                             android:layout_weight="1"
                             android:inputType="number"
+                            android:maxLength="6"
                             android:background="@drawable/rectangle_border_square"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
@@ -485,6 +544,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_marginBottom="5dp"
                             android:layout_weight="1"
+                            android:text="0"
                             android:background="@drawable/rectangle_border_square"
                             android:inputType="number"
                             android:paddingLeft="5dp"
@@ -575,18 +635,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="30dp"
                             android:layout_weight="1"
+                            android:weightSum="2"
                             android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/rb_yes"
                                 android:layout_width="100dp"
                                 android:layout_height="40dp"
+                                android:layout_weight="1"
                                 android:text="Yes" />
 
                             <RadioButton
                                 android:id="@+id/rb_no"
                                 android:layout_width="100dp"
                                 android:layout_height="40dp"
+                                android:layout_weight="1"
                                 android:text="No" />
 
                         </RadioGroup>
@@ -996,6 +1059,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -1014,6 +1078,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1023,14 +1088,13 @@
                             android:layout_height="46dp"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
+
 
                         </LinearLayout>
 
@@ -1152,6 +1216,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -1170,6 +1235,7 @@
                                 android:inputType="textCapCharacters"
                                 android:background="@drawable/rectangle_border_square"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1179,13 +1245,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no1"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1305,6 +1369,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -1323,6 +1388,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1332,13 +1398,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no2"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1457,6 +1521,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -1475,6 +1540,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1484,13 +1550,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no3"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1609,6 +1673,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -1627,6 +1692,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1636,13 +1702,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no4"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1761,6 +1825,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -1779,6 +1844,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1788,13 +1854,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no5"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1913,6 +1977,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -1931,6 +1996,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -1940,13 +2006,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no6"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -2065,6 +2129,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -2083,6 +2148,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -2092,13 +2158,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no7"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -2217,6 +2281,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -2235,6 +2300,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -2245,13 +2311,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no8"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -2371,6 +2435,7 @@
                                 android:layout_height="35dp"
                                 android:background="@drawable/rectangle_border_square"
                                 android:drawableRight="@drawable/ic_search"
+                                android:inputType="textCapCharacters"
                                 android:padding="5dp"
                                 android:textSize="15dp" />
 
@@ -2389,6 +2454,7 @@
                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                                 android:inputType="textCapCharacters"
                                 android:padding="5dp"
+                                android:singleLine="true"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -2398,13 +2464,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1">
 
-                            <EditText
+                            <Spinner
                                 android:id="@+id/contact_no9"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/rectangle_border_square"
-                                android:inputType="number"
-                                android:padding="5dp"
+                                android:background="@drawable/spinner_background"
                                 android:textSize="15dp" />
 
                         </LinearLayout>
@@ -2640,7 +2704,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="19dp"
                     android:layout_marginTop="20dp"
                     android:text="Deductions"
                     android:textAlignment="center"
@@ -2810,6 +2874,7 @@
                         android:layout_weight="1"
                         android:weightSum="2">
 
+
                     </LinearLayout>
 
                     <!-- -->
@@ -2878,7 +2943,156 @@
 
             </LinearLayout>
 
-            <!-- Remark -->
+
+            <!-- total details -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/lin_chq_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:text="Chq amt"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/tot_chq_amt"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:text="0"
+                            android:inputType="number"
+                            android:background="@drawable/rectangle_border_square"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/lin_rtgs_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:text="Payment amt"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/dec_amt"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:text="0"
+                            android:background="@drawable/rectangle_border_square"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/lin_chq_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:text="Balance amt"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/balance_amt"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:text="0"
+                            android:background="@drawable/rectangle_border_square"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        <!-- Remark -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -2896,7 +3110,6 @@
                     android:layout_weight="1"
                     android:background="@drawable/rectangle_border_square"
                     android:hint="Remarks : "
-                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
                     android:inputType="textCapCharacters"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
@@ -2908,9 +3121,9 @@
                 android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="550dp"
+                android:layout_marginLeft="300dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="550dp"
+                android:layout_marginRight="300dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/blue_btn_bg_color"
                 android:text="Submit"

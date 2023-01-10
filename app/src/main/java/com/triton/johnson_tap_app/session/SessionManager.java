@@ -142,7 +142,7 @@ public class SessionManager {
 
     }*/
 
-    public void createSessionLogin(String id,String userid, String username,String user_email, String designation, String token, String status, String user_type,String user_role,String user_agent_code) {
+    public void createSessionLogin(String id1, String s, String id, String userid, String username, String user_email, String designation, String token, String status, String user_type, String user_role, String user_agent_code) {
         editor.putBoolean(IS_LOGIN, true);
         editor.putString(KEY_ID, id);
         editor.putString(KEY_USERID, userid);
